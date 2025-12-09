@@ -1,2 +1,6 @@
 ^meteorologia\.Rproj$
 ^\.Rproj\.user$
+^data_raw$
+^NH0472.csv$
+^NH0910.csv$
+^NH0046.csv$
