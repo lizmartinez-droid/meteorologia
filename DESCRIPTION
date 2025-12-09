@@ -1,9 +1,9 @@
 Package: meteorologia
-Title: What the Package Does (One Line, Title Case)
+Title:  Datos De Estaciones Meteorologicas De La INTA
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+    person("Liz", "Martinez", , "lizmartinezfacultad@gmail.com", role = c("aut", "cre"))
+Description: Este paquete carga y lee datos de estaciones meteorologicas del Instituto Nacional de Tecnología Agropecuaria (INTA). Con sus funciones los analiza, resume en tablas y grafica.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
