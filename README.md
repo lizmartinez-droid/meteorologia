@@ -75,4 +75,9 @@ Agropecuaria (INTA) – Sistema de Información y Gestión Agropecuaria
 
 Este paquete se distribuye bajo la licencia [MIT](LICENSE.md).
 
+## Cómo contribuir
+
+Si querés colaborar con este proyecto, por favor leé primero nuestra
+guía de contribución: [Guía de contribución](CONTRIBUTING.md)
+
 ### Autor del paquete: Liz Martinez
