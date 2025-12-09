@@ -24,5 +24,6 @@ Un gráfico de líneas que representa la temperatura mensual por id.
 ' Esta función genera un gráfico de líneas que muestra la temperatura promedio mensual para cada estación en el conjunto de datos proporcionado.
 }
 \examples{
-grafico_temperatura_mensual(estacion_NH0910, colores = c("red", "blue"), titulo = "Temperatura mensual NH0910")
+grafico_temperatura_mensual(estacion_NH0910, colores = c("red", "blue"),
+titulo = "Temperatura mensual NH0910")
 }

@@ -9,19 +9,20 @@
 #' @export
 #'
 #' @examples
-#' grafico_temperatura_mensual(estacion_NH0910, colores = c("red", "blue"), titulo = "Temperatura mensual NH0910")
+#' grafico_temperatura_mensual(estacion_NH0910, colores = c("red", "blue"),
+#' titulo = "Temperatura mensual NH0910")
 grafico_temperatura_mensual <- function(estaciones,
                                         colores,
                                         titulo = "Temperatura mensual") {
-
+  .data <- rlang::.data
   if (!is.data.frame(estaciones)) {
     stop("El argumento estaciones debe ser un data frame o tibble con datos de estaciones.")
   }
 
   resumen_mensual <- estaciones |>
-    dplyr::group_by(id, mes = lubridate::month(fecha)) |>
+    dplyr::group_by(.data$id, mes = lubridate::month(.data$fecha)) |>
     dplyr::summarise(
-      temp_promedio = mean(temperatura_abrigo_150cm, na.rm = TRUE), .groups = "drop"
+      temp_promedio = mean(.data$temperatura_abrigo_150cm, na.rm = TRUE), .groups = "drop"
     )
 
   cantidad <- dplyr::n_distinct(resumen_mensual$id)
@@ -37,10 +38,10 @@ grafico_temperatura_mensual <- function(estaciones,
   grafico <- ggplot2::ggplot(
     resumen_mensual,
     ggplot2::aes(
-      x = mes,
-      y = temp_promedio,
-      color = id,
-      group = id
+      x = .data$mes,
+      y = .data$temp_promedio,
+      color = .data$id,
+      group = .data$id
     )
   ) +
     ggplot2::geom_line() +

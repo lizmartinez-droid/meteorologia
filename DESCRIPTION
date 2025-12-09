@@ -13,7 +13,17 @@ BugReports: https://github.com/lizmartinez-droid/meteorologia/issues
 Depends: 
     R (>= 3.5)
 LazyData: true
+Imports:
+    dplyr,
+    ggplot2,
+    readr,
+    lubridate,
+    cli,
+    rlang
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    testthat (>= 3.0.0),
+    pkgdown
 VignetteBuilder: knitr
+Config/testthat/edition: 3
